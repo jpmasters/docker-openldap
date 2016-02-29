@@ -18,6 +18,8 @@ VOLUME ["/etc/ldap", "/var/lib/ldap"]
 
 COPY modules/ /etc/ldap.dist/modules
 
+COPY schemas/ /etc/ldap.dist/schema
+
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
